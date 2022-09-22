@@ -1,5 +1,7 @@
 import marshal, base64
-tfile = 'template.py' if input("Put a try/except statement?\nThis can stop code leaking if an error happens in the compiler script (very rare unless the user is on the wrong python version)\nThis will also stop any errors from being reported to the user\nNote that someone with basic python knowledge CAN get around this, but it wouldn't leak them the source code\nType T for yes, N for no: ").lower() == 't' else 'tempnoerror.py'
+print('PYO\nPython Obfuscator\n\n')
+tfile = 'template.py' if input("Put a try/except statement?\nThis can stop code leaking if an error happens in the compiler script (very rare unless the user is on the wrong python version)\nThis will also stop any errors in your pogram from being reported to the user\nNote that someone with basic python knowledge CAN get around this, but it wouldn't leak them the source code\n\nRecommended setting: No\n\nType T for yes, N for no: ").lower() == 't' else 'tempnoerror.py'
+print('\n\n')
 try:
     with open("input.py", 'r') as f:
         content = f.read()
@@ -20,6 +22,6 @@ try:
         print("[5/5] Encoded to base64, wrote to file")
         f.close()
 except:
-    print("[PYO] Failed to compile. Make sure your input code is valid")
+    print("\n\n[PYO] Failed to compile. Make sure your input code is valid")
 else:
-    print("[PYO] Compile finished. Result in output.py")
+    print("\n\n[PYO] Compile finished. Result in output.py")
